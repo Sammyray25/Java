@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class MinutesConversion {
+        public static void main(String[] args) {
+        // Write your code here
+        int minutes;
+        final double hours;
+		final double days; // float for decimal point
+		
+        Scanner input = new Scanner(System.in);
+		System.out.println("Please enter minutes for conversion >> ");		//user is prompted to input
+		minutes = input.nextInt();								//input method
+		
+		//60 minutes = 1 hour
+		// 6000 minutes = 4.167 days
+		
+	     hours = minutes / 60.0; //equation to convert minutes by 60 to get hours
+	     days = hours / 24.0;
+				
+		
+		System.out.println(minutes + " minutes is " + hours + " hours or  \n"  + days + " days. ");
+    }
+}
