@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class ChiliToGo {
+
+    public static void main(String[] args){
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number of adult meals ordered >> ");
+        int adultMeals = in.nextInt();
+        System.out.print("Enter the number of child meals ordered >> ");
+        int childMeals = in.nextInt();
+
+        double childMealsPrice = childMeals * 4.00;
+        double adultMealsPrice = adultMeals * 7.00;
+
+        System.out.println(adultMeals + " adult meals were ordered at 7.0 each.\n       Total is " + adultMealsPrice);
+        System.out.println(childMeals + " child meals were ordered at 4.0 each.\n       Total is" + childMealsPrice);
+    
+        System.out.println("grand total for all meals is " + (childMealsPrice + adultMealsPrice));
+    }
+}
