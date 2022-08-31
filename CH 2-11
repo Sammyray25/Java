@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Eggs {
+    public static void main(String[] args){
+        final int DOZEN = 12;
+        final double PRICE_PER_DOZEN = 3.25;
+        final double PRICE_EACH = .45;
+        int eggs;
+        int dozens;
+        int singleEggs;
+        double total;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("How many eggs would you like? >> ");
+        eggs = input.nextInt();
+
+        dozens = eggs / DOZEN;
+        singleEggs = eggs % DOZEN;
+        total = (dozens * PRICE_PER_DOZEN) + (singleEggs * PRICE_EACH);
+
+        System.out.printf("You ordered " + eggs + " eggs, which is " + dozens +
+        " dozen at $3.25 per dozen and " + singleEggs + 
+        " loose eggs at 45 cents each for a total of $%.2f\n", total);
+
+        
+    }
+}
