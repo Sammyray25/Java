@@ -1,0 +1,23 @@
+public class BookstoreCredit {
+    public static void main (String args[]) {
+        // Write your code here
+        String name;
+        double gpa;
+        double credits = 10;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter name: ");
+        name = input.next();
+        System.out.print("Enter GPA: ");
+        gpa = input.nextDouble();
+        credits = 10;
+        computeDiscount(name,gpa,credits);
+    }
+
+    public static void computeDiscount(String name, double gpa, double credits) {
+        // Write your code here
+        double total_credits = gpa * credits;
+        System.out.printf(name+ ", your GPA is " + gpa + ", so your credit is $%.2f",total_credits);
+    }
+
+}
